@@ -12,7 +12,7 @@ namespace topology {
   * @param fileName the file name of the json file containing a topology
   * @return topology::Topology a Topology Object
   */
-  Topology readJSON(const std::string fileName);
+  Topology readJSON(const std::string fileName = "");
 
   /**
   * Writes a topology from a topologyList object on the hard disk

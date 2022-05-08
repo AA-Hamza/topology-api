@@ -1,3 +1,5 @@
+#include <exception>
+#include <ios>
 #include <iostream>
 #include <fstream>
 #include <nlohmann/json.hpp>
@@ -6,17 +8,30 @@
 
 // for convenience
 using json = nlohmann::json;
-using namespace std;
+//using namespace std;
 //using namespace topology;
 
 topology::Topology topology::readJSON(const std::string fileName) {
     json fileJson;
-    ifstream file(fileName);
     try {
-        file >> fileJson;
+        if (fileName.empty())  {
+            // Use stdin if fileName is empty
+            std::cin >> fileJson;
+        }
+        else {
+            std::ifstream file(fileName);
+            if (file.is_open()) {
+                file >> fileJson;
+            }
+            else {
+                std::cerr << "Couldn't Open file " << fileName << std::endl;
+                exit(-1);
+            }
+            file.close();
+        }
     }
     catch (json::exception &e) {
-        std::cerr << "Error reading from " << fileName << std::endl;
+        std::cerr << "Error parsing json from " << fileName << std::endl;
         throw e;
     }
     return Topology(fileJson);
@@ -27,6 +42,6 @@ void topology::writeJSON(const topology::TopologyList &topologyList, const std::
         fileName = topolgoyID;
     }
 
-    ofstream file(fileName);
+    std::ofstream file(fileName);
     //Toplogy fileJson = topologyList[topolgoyID];
 }

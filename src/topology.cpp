@@ -5,7 +5,7 @@ using namespace topology;
 Topology::Topology(const json &topologyJson) {
   try {
     m_topologyID = topologyJson.at("id");
-    std::vector<json::array_t> componentsJson = topologyJson.at("components");
+    json::array_t componentsJson = topologyJson.at("components");
 
     // Populate m_components with topology components
     for (size_t i = 0; i < componentsJson.size(); ++i) {
