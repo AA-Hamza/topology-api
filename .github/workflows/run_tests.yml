@@ -14,6 +14,6 @@ jobs:
         run: meson build
       - name: compile and test
         run: >-
-          cd build/ 
-          meson compile 
-          meson test
+            cd build/; 
+            meson compile;
+            meson test;
