@@ -82,6 +82,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab38788b0e09d92c077b3aeeb85741946"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac269edde6fd57ebf5658f6a526e5b129"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classtopology_1_1Device.html">Device</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtopology_1_1Topology.html#ac269edde6fd57ebf5658f6a526e5b129">getDevices</a> () const</td></tr>
 <tr class="separator:ac269edde6fd57ebf5658f6a526e5b129"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71dfe59f6f5023bd1eed4257a6b2e199"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classtopology_1_1Device.html">Device</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtopology_1_1Topology.html#a71dfe59f6f5023bd1eed4257a6b2e199">getDevicesConnectedTo</a> (std::string netListNode) const</td></tr>
+<tr class="separator:a71dfe59f6f5023bd1eed4257a6b2e199"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeca7a520a34914251fc4e3dcd5c27194"><td class="memItemLeft" align="right" valign="top">json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtopology_1_1Topology.html#aeca7a520a34914251fc4e3dcd5c27194">toJson</a> () const</td></tr>
+<tr class="separator:aeca7a520a34914251fc4e3dcd5c27194"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
@@ -133,6 +137,25 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>TopologyList</b></td
 
 </div>
 </div>
+<a id="a71dfe59f6f5023bd1eed4257a6b2e199" name="a71dfe59f6f5023bd1eed4257a6b2e199"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71dfe59f6f5023bd1eed4257a6b2e199">&#9670;&nbsp;</a></span>getDevicesConnectedTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="classtopology_1_1Device.html">Device</a> &gt; topology::Topology::getDevicesConnectedTo </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>netListNode</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Devices connected to a net list node </dd></dl>
+
+</div>
+</div>
 <a id="ab38788b0e09d92c077b3aeeb85741946" name="ab38788b0e09d92c077b3aeeb85741946"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab38788b0e09d92c077b3aeeb85741946">&#9670;&nbsp;</a></span>getID()</h2>
 
@@ -148,6 +171,24 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>TopologyList</b></td
       </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classtopology_1_1Topology.html">Topology</a> ID </dd></dl>
+
+</div>
+</div>
+<a id="aeca7a520a34914251fc4e3dcd5c27194" name="aeca7a520a34914251fc4e3dcd5c27194"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeca7a520a34914251fc4e3dcd5c27194">&#9670;&nbsp;</a></span>toJson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">json Topology::toJson </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>json representation of topology </dd></dl>
 
 </div>
 </div>

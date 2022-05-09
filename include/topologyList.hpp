@@ -14,6 +14,7 @@ using json = nlohmann::json;
 namespace topology {
   class TopologyList {
     public:
+      TopologyList() {};
       /**
       * @param topologiesSrc a vector of Topology objects
       */
@@ -22,16 +23,16 @@ namespace topology {
       /**
       * get the topolgoy in the topologyList by it's ID
       * @param topologyID a topology object ID
-      * @return returns a const reference to the topology
+      * @return returns a copy to the topology with topologyID
       */
-      const Topology &operator[](const std::string topologyID);
+      Topology operator[](const std::string topologyID);
 
       /**
       * Add a new topology to the list, it throws an exception if the id already exists
       * @param topology a topology Object
-      * @return returns a pointer to the created topology on success otherwise null
+      * @return returns true on success, false otherwise
       */
-      Topology *add(const Topology &topology);
+      bool add(const Topology &topology);
 
       /**
       * remove a topology from the TopologyList
@@ -40,8 +41,23 @@ namespace topology {
       */
       bool erase(const std::string topologyID);
 
+      /**
+      * @return get the size of the topology
+      */
+      size_t size() const;
+
+      /**
+      * @return const_iterator to the begining of the topologyList map
+      */
+      std::map<std::string, Topology>::const_iterator cbegin() const;
+
+      /**
+      * @return const_iterator to the end of the topologyList map
+      */
+      std::map<std::string, Topology>::const_iterator cend() const;
+
     private:
-      std::map<std::string, Topology> topologies;
+      std::map<std::string, Topology> m_topologies;
   };
 }
 #endif

@@ -28,6 +28,16 @@ namespace topology {
     */
     const std::vector<Device> getDevices() const;
 
+    /**
+    * @return Devices connected to a net list node
+    */
+    std::vector<Device> getDevicesConnectedTo(std::string netListNode) const;
+
+    /**
+    * @return json representation of topology
+    */
+    json toJson() const;
+
     ~Topology() {}
 
   private:

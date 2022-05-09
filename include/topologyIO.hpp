@@ -9,6 +9,7 @@
 
 namespace topology {
   /**
+  * Read a topology Json file. If none is provided it reads from stdin
   * @param fileName the file name of the json file containing a topology
   * @return topology::Topology a Topology Object
   */

@@ -1,14 +1,18 @@
 #include <device.hpp>
+#include <iostream>
 
-using namespace topology;
+//using namespace topology;
 
-// Constructor
-Device::Device(const json &deviceJson) {
-  try {
-    m_deviceID = deviceJson.at("id");
-    m_type = deviceJson.at("type");
+namespace topology {
+  std::string Device::getType() const{
+    return m_deviceType;
   }
-  catch (const json::exception &e){
-    throw e;
+
+  std::vector<std::pair<std::string, std::string>> Device::getNetList() const {
+    return m_netList;
+  }
+
+  std::map<std::string, double> Device::getProperties() const {
+    return m_deviceProperties;
   }
 }

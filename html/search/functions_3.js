@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['getdevices_0',['getDevices',['../classtopology_1_1Topology.html#ac269edde6fd57ebf5658f6a526e5b129',1,'topology::Topology']]],
-  ['getid_1',['getID',['../classtopology_1_1Topology.html#ab38788b0e09d92c077b3aeeb85741946',1,'topology::Topology']]]
+  ['operator_5b_5d_0',['operator[]',['../classtopology_1_1TopologyList.html#a09b3a5a79fc9f265d5a7872533a4b286',1,'topology::TopologyList']]]
 ];

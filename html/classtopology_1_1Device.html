@@ -68,6 +68,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classtopology_1_1Device-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">topology::Device Class Reference</div></div>
 </div><!--header-->
@@ -75,31 +76,108 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab1583cf55aa7910e9c613ee1335b8d57"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtopology_1_1Device.html#ab1583cf55aa7910e9c613ee1335b8d57">Device</a> (const json &amp;deviceJson)</td></tr>
-<tr class="separator:ab1583cf55aa7910e9c613ee1335b8d57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6199fbaafb5556cd47be11c4974b964"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtopology_1_1Device.html#ad6199fbaafb5556cd47be11c4974b964">getType</a> () const</td></tr>
+<tr class="separator:ad6199fbaafb5556cd47be11c4974b964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af63c43cb43cdd2014a34c5b7f03fdebe"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtopology_1_1Device.html#af63c43cb43cdd2014a34c5b7f03fdebe">getProperties</a> () const</td></tr>
+<tr class="separator:af63c43cb43cdd2014a34c5b7f03fdebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7733d83197619b354ef0ffedeabe5f1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; std::string, std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtopology_1_1Device.html#ad7733d83197619b354ef0ffedeabe5f1">getNetList</a> () const</td></tr>
+<tr class="separator:ad7733d83197619b354ef0ffedeabe5f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a249b3bcaae2b941f8b96e050d6bd56f4"><td class="memItemLeft" align="right" valign="top">virtual json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtopology_1_1Device.html#a249b3bcaae2b941f8b96e050d6bd56f4">toJson</a> () const</td></tr>
+<tr class="separator:a249b3bcaae2b941f8b96e050d6bd56f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a8a7928c77ff7e1af3c15c08fd739bf2a"><td class="memItemLeft" align="right" valign="top"><a id="a8a7928c77ff7e1af3c15c08fd739bf2a" name="a8a7928c77ff7e1af3c15c08fd739bf2a"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_deviceID</b></td></tr>
+<tr class="separator:a8a7928c77ff7e1af3c15c08fd739bf2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77bf560cfa26e5ee1d2157787a71dcea"><td class="memItemLeft" align="right" valign="top"><a id="a77bf560cfa26e5ee1d2157787a71dcea" name="a77bf560cfa26e5ee1d2157787a71dcea"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_deviceType</b></td></tr>
+<tr class="separator:a77bf560cfa26e5ee1d2157787a71dcea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf912b72fba45483467b0ea3a6f8586d"><td class="memItemLeft" align="right" valign="top"><a id="abf912b72fba45483467b0ea3a6f8586d" name="abf912b72fba45483467b0ea3a6f8586d"></a>
+std::map&lt; std::string, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_deviceProperties</b></td></tr>
+<tr class="separator:abf912b72fba45483467b0ea3a6f8586d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03b4773376688ce0ce433501524e3217"><td class="memItemLeft" align="right" valign="top"><a id="a03b4773376688ce0ce433501524e3217" name="a03b4773376688ce0ce433501524e3217"></a>
+std::vector&lt; std::pair&lt; std::string, std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_netList</b></td></tr>
+<tr class="separator:a03b4773376688ce0ce433501524e3217"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ab1583cf55aa7910e9c613ee1335b8d57" name="ab1583cf55aa7910e9c613ee1335b8d57"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1583cf55aa7910e9c613ee1335b8d57">&#9670;&nbsp;</a></span>Device()</h2>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad7733d83197619b354ef0ffedeabe5f1" name="ad7733d83197619b354ef0ffedeabe5f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7733d83197619b354ef0ffedeabe5f1">&#9670;&nbsp;</a></span>getNetList()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Device::Device </td>
+          <td class="memname">std::vector&lt; std::pair&lt; std::string, std::string &gt; &gt; topology::Device::getNetList </td>
           <td>(</td>
-          <td class="paramtype">const json &amp;&#160;</td>
-          <td class="paramname"><em>deviceJson</em></td><td>)</td>
-          <td></td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">deviceJson</td><td>A json object representing the device </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section return"><dt>Returns</dt><dd>the net list of the device </dd></dl>
+
+</div>
+</div>
+<a id="af63c43cb43cdd2014a34c5b7f03fdebe" name="af63c43cb43cdd2014a34c5b7f03fdebe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af63c43cb43cdd2014a34c5b7f03fdebe">&#9670;&nbsp;</a></span>getProperties()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt; std::string, double &gt; topology::Device::getProperties </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>returns a map&lt;string, double&gt; representing a copy of device properites </dd></dl>
+
+</div>
+</div>
+<a id="ad6199fbaafb5556cd47be11c4974b964" name="ad6199fbaafb5556cd47be11c4974b964"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6199fbaafb5556cd47be11c4974b964">&#9670;&nbsp;</a></span>getType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string topology::Device::getType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>returns the type of the <a class="el" href="classtopology_1_1Device.html">Device</a> </dd></dl>
+
+</div>
+</div>
+<a id="a249b3bcaae2b941f8b96e050d6bd56f4" name="a249b3bcaae2b941f8b96e050d6bd56f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a249b3bcaae2b941f8b96e050d6bd56f4">&#9670;&nbsp;</a></span>toJson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual json topology::Device::toJson </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the json representation of the device </dd></dl>
 
 </div>
 </div>

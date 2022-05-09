@@ -3,17 +3,14 @@
 
 #include <nlohmann/json.hpp>
 #include <string>
+#include <iostream>
 
 using json = nlohmann::json;
 
 namespace topology {
   class Device {
     public:
-      /**
-      * @param deviceJson A json object representing the device
-      */
-      Device(const json &deviceJson);
-
+      Device() {}
       /**
       * @return returns the type of the Device
       */
@@ -24,11 +21,26 @@ namespace topology {
       */
       std::map<std::string, double> getProperties() const;
 
-    private:
+      /**
+      * @return the net list of the device
+      */
+      std::vector<std::pair<std::string, std::string>> getNetList() const;
+
+
+      /**
+      * @return the json representation of the device
+      */
+      virtual json toJson() const {
+        return json();  // Will get overriden by devices, here for compiler errors
+      };
+
+      virtual ~Device() {}
+
+    protected:
       std::string m_deviceID;
       std::string m_deviceType;
       std::map<std::string, double> m_deviceProperties;
-      std::vector<std::map<std::string, std::string>> m_netList;
+      std::vector<std::pair<std::string, std::string>> m_netList;
   };
 }
 #endif

@@ -1,4 +1,6 @@
-sources = ['device.cpp', 'topology.cpp', 'topologyAPI.cpp', 'topologyList.cpp']
+topologySource = ['topology.cpp', 'topologyIO.cpp', 'topologyList.cpp']
+devicesSource  = ['device.cpp', 'devices/resistor.cpp', 'devices/nmos.cpp'] 
+sources = devicesSource+topologySource
 topologylib = library('topologylib',
                      sources,
                      include_directories: inc,

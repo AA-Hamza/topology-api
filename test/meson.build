@@ -1,8 +1,7 @@
-testexe = executable('Test Topology API', 
-                     'test.cpp',
+testTopologyList = executable('Test topology list', 
+                     'testTopologyList.cpp',
                      dependencies: json,
                      include_directories: inc,
                      link_with: topologylib)
 
-test('test with stdin', testexe, workdir : meson.current_source_dir())
-                    
+test('Test topology list', testTopologyList, workdir : meson.current_source_dir())
