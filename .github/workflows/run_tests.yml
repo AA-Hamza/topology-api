@@ -10,27 +10,49 @@ jobs:
         run: sudo apt-get install python3 python3-pip python3-setuptools python3-wheel ninja-build
       - name: Installing meson
         run: pip3 install --user meson
-      - name: Build
+      - name: Prepare build
         run: meson build
-      - name: compile and test
+      - name: Run compile
         working-directory: ./build
-        run: >-
-            meson compile;
-            meson test;
-  windows:
+        run: meson compile
+      - name: Run test
+        working-directory: ./build
+        run: meson test
+
+  windows-gcc:
+    name: Windows with GCC
     runs-on: windows-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Installing requried packages for meson
-        uses: seanmiddleditch/gha-setup-ninja@master
-      - name: Installing meson
-        run: pip3 install meson
-      - name: Build
+      - name: Installing meson and ninja
+        run: pip3 install meson ninja
+      - name: Prepare Build
         run: meson build
-      - name: compile 
+      - name: Run compile 
         working-directory: ./build
         run: meson compile
-      - name: test
+      - name: Run tests
         working-directory: ./build
         run: meson test
+
+  windows-msvc:
+    name: Windows with MSVC
+    runs-on: windows-latest
+    steps:
+    - name: Fetch Sources
+      uses: actions/checkout@v2
+    - name: Install Python Dependencies
+      run: pip3 install meson ninja
+    - name: Prepare MSVC
+      uses: bus1/cabuild/action/msdevshell@v1
+      with:
+        architecture: x64
+    - name: Prepare Build
+      run: meson setup build
+    - name: Run Build
+      working-directory: ./build
+      run: meson compile -v 
+    - name: Run Test Suite
+      working-directory: ./build
+      run: meson test -v
