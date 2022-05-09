@@ -37,11 +37,12 @@ topology::Topology topology::readJSON(const std::string fileName) {
     return Topology(fileJson);
 }
 
-void topology::writeJSON(const topology::TopologyList &topologyList, const std::string topolgoyID, std::string fileName) {
+bool topology::writeJSON(const topology::TopologyList &topologyList, const std::string topolgoyID, std::string fileName) {
     if (fileName.empty()) {
         fileName = topolgoyID;
     }
 
     std::ofstream file(fileName);
     //Toplogy fileJson = topologyList[topolgoyID];
+    return true;
 }
