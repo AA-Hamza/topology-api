@@ -28,7 +28,7 @@ jobs:
       - name: Installing meson and ninja
         run: pip3 install meson ninja
       - name: Prepare Build
-        run: meson build
+        run: meson setup build
       - name: Run compile 
         working-directory: ./build
         run: meson compile
@@ -42,17 +42,21 @@ jobs:
     steps:
     - name: Fetch Sources
       uses: actions/checkout@v2
+    - name: Setup Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
     - name: Install Python Dependencies
       run: pip3 install meson ninja
     - name: Prepare MSVC
       uses: bus1/cabuild/action/msdevshell@v1
       with:
-        architecture: x64
+        architecture: x86
     - name: Prepare Build
       run: meson setup build
     - name: Run Build
       working-directory: ./build
-      run: meson compile -v 
+      run: meson compile 
     - name: Run Test Suite
       working-directory: ./build
-      run: meson test -v
+      run: meson test
