@@ -50,8 +50,6 @@ jobs:
       run: pip3 install meson ninja
     - name: Prepare MSVC
       uses: bus1/cabuild/action/msdevshell@v1
-      with:
-        architecture: x86
     - name: Prepare Build
       run: meson setup build
     - name: Run Build
