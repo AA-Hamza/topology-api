@@ -8,10 +8,13 @@
 using json = nlohmann::json;
 
 namespace topology {
+  /**
+  * @brief Nmos (N-type metal-oxide-semiconductor) device
+  */
   class Nmos : public Device {
     public:
       /**
-      * Construct a N-type metal-oxide-semiconductor from the json representation
+      * @brief Construct a N-type metal-oxide-semiconductor from the json representation
       * @param deviceJson A json object representing the nmos
       */
       Nmos(const json &deviceJson);

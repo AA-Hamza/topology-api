@@ -8,6 +8,9 @@
 using json = nlohmann::json;
 
 namespace topology {
+  /**
+  * @brief Resistor device
+  */
   class Resistor : public Device {
     public:
       /**

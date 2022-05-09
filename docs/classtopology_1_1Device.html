@@ -23,6 +23,7 @@
   <td id="projectalign">
    <div id="projectname">Topology API
    </div>
+   <div id="projectbrief">A simple API to electronic topologies</div>
   </td>
  </tr>
  </tbody>
@@ -73,9 +74,28 @@ $(function() {
   <div class="headertitle"><div class="title">topology::Device Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>base class containing basic functionality of every device  
+ <a href="classtopology_1_1Device.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="device_8hpp_source.html">device.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for topology::Device:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classtopology_1_1Device.png" usemap="#topology::Device_map" alt=""/>
+  <map id="topology::Device_map" name="topology::Device_map">
+<area href="classtopology_1_1Nmos.html" title="Nmos (N-type metal-oxide-semiconductor) device." alt="topology::Nmos" shape="rect" coords="0,56,111,80"/>
+<area href="classtopology_1_1Resistor.html" title="Resistor device." alt="topology::Resistor" shape="rect" coords="121,56,232,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a9965118047a56118370c302fd5878f32"><td class="memItemLeft" align="right" valign="top"><a id="a9965118047a56118370c302fd5878f32" name="a9965118047a56118370c302fd5878f32"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Device</b> ()</td></tr>
+<tr class="memdesc:a9965118047a56118370c302fd5878f32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compiler default constructor, used for initializing differnt data types. <br /></td></tr>
+<tr class="separator:a9965118047a56118370c302fd5878f32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6199fbaafb5556cd47be11c4974b964"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtopology_1_1Device.html#ad6199fbaafb5556cd47be11c4974b964">getType</a> () const</td></tr>
 <tr class="separator:ad6199fbaafb5556cd47be11c4974b964"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af63c43cb43cdd2014a34c5b7f03fdebe"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtopology_1_1Device.html#af63c43cb43cdd2014a34c5b7f03fdebe">getProperties</a> () const</td></tr>
@@ -84,6 +104,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad7733d83197619b354ef0ffedeabe5f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a249b3bcaae2b941f8b96e050d6bd56f4"><td class="memItemLeft" align="right" valign="top">virtual json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtopology_1_1Device.html#a249b3bcaae2b941f8b96e050d6bd56f4">toJson</a> () const</td></tr>
 <tr class="separator:a249b3bcaae2b941f8b96e050d6bd56f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf5d373860e6d8fb556ff8f2bb800b4c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtopology_1_1Device.html#aaf5d373860e6d8fb556ff8f2bb800b4c">~Device</a> ()</td></tr>
+<tr class="separator:aaf5d373860e6d8fb556ff8f2bb800b4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -100,6 +122,35 @@ std::map&lt; std::string, double &gt;&#160;</td><td class="memItemRight" valign=
 std::vector&lt; std::pair&lt; std::string, std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_netList</b></td></tr>
 <tr class="separator:a03b4773376688ce0ce433501524e3217"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >base class containing basic functionality of every device </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aaf5d373860e6d8fb556ff8f2bb800b4c" name="aaf5d373860e6d8fb556ff8f2bb800b4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf5d373860e6d8fb556ff8f2bb800b4c">&#9670;&nbsp;</a></span>~Device()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual topology::Device::~Device </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Virtual destructor needed as this is the base class </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="ad7733d83197619b354ef0ffedeabe5f1" name="ad7733d83197619b354ef0ffedeabe5f1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad7733d83197619b354ef0ffedeabe5f1">&#9670;&nbsp;</a></span>getNetList()</h2>
@@ -115,7 +166,7 @@ std::vector&lt; std::pair&lt; std::string, std::string &gt; &gt;&#160;</td><td c
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>the net list of the device </dd></dl>
+<p >Make a copy of <a class="el" href="classtopology_1_1Device.html" title="base class containing basic functionality of every device">Device</a> m_netList and return it </p><dl class="section return"><dt>Returns</dt><dd>the net list of the <a class="el" href="classtopology_1_1Device.html" title="base class containing basic functionality of every device">Device</a> </dd></dl>
 
 </div>
 </div>
@@ -133,7 +184,7 @@ std::vector&lt; std::pair&lt; std::string, std::string &gt; &gt;&#160;</td><td c
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>returns a map&lt;string, double&gt; representing a copy of device properites </dd></dl>
+<p >Make a copy of m_deviceProperties and return it </p><dl class="section return"><dt>Returns</dt><dd>returns a map&lt;string, double&gt; representing a copy of device properites </dd></dl>
 
 </div>
 </div>
@@ -151,7 +202,7 @@ std::vector&lt; std::pair&lt; std::string, std::string &gt; &gt;&#160;</td><td c
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>returns the type of the <a class="el" href="classtopology_1_1Device.html">Device</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>returns the type of the <a class="el" href="classtopology_1_1Device.html" title="base class containing basic functionality of every device">Device</a> </dd></dl>
 
 </div>
 </div>
@@ -177,7 +228,9 @@ std::vector&lt; std::pair&lt; std::string, std::string &gt; &gt;&#160;</td><td c
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>the json representation of the device </dd></dl>
+<p >Make a json representation of <a class="el" href="classtopology_1_1Device.html" title="base class containing basic functionality of every device">Device</a> Will get overridden by derived devices </p><dl class="section return"><dt>Returns</dt><dd>the json object of <a class="el" href="classtopology_1_1Device.html" title="base class containing basic functionality of every device">Device</a> </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classtopology_1_1Nmos.html#a5c69a487f8960d6702d6c3eeb5853834">topology::Nmos</a>, and <a class="el" href="classtopology_1_1Resistor.html#a880bb04ebf1bbc3d2eeedfa61757fe4f">topology::Resistor</a>.</p>
 
 </div>
 </div>

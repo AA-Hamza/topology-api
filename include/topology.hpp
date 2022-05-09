@@ -9,11 +9,19 @@
 using json = nlohmann::json;
 
 namespace topology {
+  /**
+  * @brief Topology class to represent the topology and parse the json object.
+  */
   class Topology {
   public:
-    Topology() = default;
     /**
-    * Construct Topology from the Json object
+    * @brief Using compiler default constructor.
+    * @brief Used while initializing different datatypes like maps and vectors.
+    */
+    Topology() = default;
+
+    /**
+    * @brief Construct Topology from the Json object
     * @param topologyJson the topology json object 
     */
     Topology(const json &topologyJson);
@@ -24,12 +32,12 @@ namespace topology {
     const std::string getID() const;
 
     /**
-    * @return A c++ vector to topology devices
+    * @return A vector to topology devices
     */
     const std::vector<Device> getDevices() const;
 
     /**
-    * @return Devices connected to a net list node
+    * @return Devices connected to a m_netList node
     */
     std::vector<Device> getDevicesConnectedTo(std::string netListNode) const;
 
@@ -44,6 +52,9 @@ namespace topology {
     std::string m_topologyID;
     std::vector<Device> m_devices;
 
+    /**
+    * TopologyList is a friend as it needs access to m_topologyID and m_devices
+    */
     friend class TopologyList;
   };
 }

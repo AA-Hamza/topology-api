@@ -18,7 +18,7 @@ Topology TopologyList::operator[](std::string topologyID) {
     return m_topologies[topologyID];
   }
   else {
-    throw std::invalid_argument("Topology ID not found");
+    throw std::invalid_argument("topologyID not found");
   }
 }
 
@@ -40,7 +40,7 @@ bool TopologyList::erase(const std::string topologyID) {
     return true;
   }
   else {
-    throw std::invalid_argument("Topology ID was not found");
+    throw std::invalid_argument("topologyID not found");
   }
   return false;
 }
