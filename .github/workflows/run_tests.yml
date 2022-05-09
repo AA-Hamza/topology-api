@@ -4,6 +4,8 @@ jobs:
   run-tests:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Installing requried packages for meson
         run: sudo apt-get install python3 python3-pip python3-setuptools python3-wheel ninja-build
       - name: Installing meson
@@ -11,4 +13,7 @@ jobs:
       - name: Build
         run: meson build
       - name: compile and test
-        run: cd build/ && meson compile && meson test
+        run: >-
+          cd build/ 
+          meson compile 
+          meson test
