@@ -31,10 +31,10 @@ jobs:
         run: meson setup build
       - name: Run compile 
         working-directory: ./build
-        run: meson compile
+        run: meson compile -v
       - name: Run tests
         working-directory: ./build
-        run: meson test
+        run: meson test -v
 
   windows-msvc:
     name: Windows with MSVC
@@ -49,12 +49,14 @@ jobs:
     - name: Install Python Dependencies
       run: pip3 install meson ninja
     - name: Prepare MSVC
-      uses: bus1/cabuild/action/msdevshell@v1
+      uses: ilammy/msvc-dev-cmd@v1
+      with:
+        arch: x64
     - name: Prepare Build
       run: meson setup build
     - name: Run Build
       working-directory: ./build
-      run: meson compile 
+      run: meson compile -v
     - name: Run Test Suite
       working-directory: ./build
-      run: meson test
+      run: meson test -v
