@@ -1,9 +1,7 @@
-topologySource = ['topology.cpp', 'topologyIO.cpp', 'topologyList.cpp']
-devicesSource  = ['device.cpp', 'devices/resistor.cpp', 'devices/nmos.cpp'] 
-sources = devicesSource+topologySource
+topologySource = ['device.cpp', 'topology.cpp', 'topologyIO.cpp', 'topologyList.cpp']
+devicesSource  = ['devices/resistor.cpp', 'devices/nmos.cpp'] 
+sources = topologySource+devicesSource
 topologylib = shared_library('topologylib',
                      sources,
                      include_directories: inc,
-                     dependencies: json,
-                     install: true)
-
+                     dependencies: json)
