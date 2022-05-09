@@ -7,7 +7,7 @@
 #include <topologyList.hpp>
 #include <iostream>
 #include <vector>
-#include <filesystem>
+//#include <filesystem>
 
 #define FILES_COUNT 5
 int main()
@@ -24,20 +24,22 @@ int main()
         exFileName << "topologies/ex" << i << ".json";
 
         // Opening the file
-        std::filesystem::path exFile = exFileName.str();
-        std::string fileFullPath = std::string(std::filesystem::absolute(exFile));
+        //std::filesystem::path exFile = exFileName.str();
+        //std::string fileFullPath = std::string(std::filesystem::absolute(exFile));
 
         // Making a topology & adding it to the topologyList
-        assert(topolgoyListTest.add(topology::readJSON(fileFullPath)) == true);
+        //assert(topolgoyListTest.add(topology::readJSON(fileFullPath)) == true);
+        assert(topolgoyListTest.add(topology::readJSON(exFileName.str())) == true);
     }
 
     // adding an already existing topology
     try {
-        std::filesystem::path exFile = "topologies/ex1.json";
-        std::string fileFullPath = std::string(std::filesystem::absolute(exFile));
+        std::string exFile = "topologies/ex1.json";
+        //std::filesystem::path exFile = "topologies/ex1.json";
+        //std::string fileFullPath = std::string(std::filesystem::absolute(exFile));
 
         // Making a topology & adding it to the topologyList
-        assert(topolgoyListTest.add(topology::readJSON(fileFullPath)) == true);
+        assert(topolgoyListTest.add(topology::readJSON(exFile)) == true);
 
     }
     catch (std::exception &e) {
