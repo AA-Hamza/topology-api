@@ -25,7 +25,7 @@ jobs:
       - name: Installing requried packages for meson
         uses: seanmiddleditch/gha-setup-ninja@master
       - name: Installing meson
-        run: pip3 install --user meson
+        run: pip3 install meson
       - name: Build
         run: meson build
       - name: compile 
