@@ -51,7 +51,7 @@ jobs:
     - name: Prepare MSVC
       uses: ilammy/msvc-dev-cmd@v1
       with:
-        arch: x64
+        arch: x86
     - name: Prepare Build
       run: meson setup build
     - name: Run Build
