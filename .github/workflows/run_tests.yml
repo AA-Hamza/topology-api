@@ -1,7 +1,7 @@
 name: Run Tests
 on: [push]
 jobs:
-  run-tests:
+  linux:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -13,7 +13,24 @@ jobs:
       - name: Build
         run: meson build
       - name: compile and test
+        working-directory: ./build
         run: >-
-            cd build/; 
             meson compile;
             meson test;
+  windows:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Installing requried packages for meson
+        uses: seanmiddleditch/gha-setup-ninja@master
+      - name: Installing meson
+        run: pip3 install --user meson
+      - name: Build
+        run: meson build
+      - name: compile 
+        working-directory: ./build
+        run: meson compile
+      - name: test
+        working-directory: ./build
+        run: meson test
