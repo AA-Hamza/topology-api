@@ -61,7 +61,7 @@ int main()
         topolgoyListTest[eraseThisTopology.getID()];
     } catch (std::exception &e) {
         std::cerr << e.what() << std::endl;
-        assert(e.what() == std::string("Topology ID not found")); 
+        assert(e.what() == std::string("topologyID not found")); 
     }
 
 }
