@@ -4,11 +4,15 @@
 //using namespace topology;
 
 namespace topology {
+  std::string Device::getID() const{
+    return m_deviceID;
+  }
+  
   std::string Device::getType() const{
     return m_deviceType;
   }
 
-  std::vector<std::pair<std::string, std::string>> Device::getNetList() const {
+std::map<std::string, std::string> Device::getNetList() const {
     return m_netList;
   }
 

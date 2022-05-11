@@ -1,4 +1,4 @@
-project('Topology API', 'cpp', default_options: ['cpp_std=c++11'])
+project('Topology API', 'cpp', default_options: ['cpp_std=c++17'])
 subproject('nlohmann_json', required: true)
 json = dependency('nlohmann_json', required: true)
 

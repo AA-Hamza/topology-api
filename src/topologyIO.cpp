@@ -1,3 +1,4 @@
+#include "topology.hpp"
 #include <exception>
 #include <ios>
 #include <iostream>
@@ -37,12 +38,22 @@ topology::Topology topology::readJSON(const std::string fileName) {
     return Topology(fileJson);
 }
 
-bool topology::writeJSON(const topology::TopologyList &topologyList, const std::string topolgoyID, std::string fileName) {
+void topology::writeJSON(const topology::Topology &outputTopolgoy, std::string fileName) {
     if (fileName.empty()) {
-        fileName = topolgoyID;
+        fileName = outputTopolgoy.getID();
     }
 
-    std::ofstream file(fileName);
-    //Toplogy fileJson = topologyList[topolgoyID];
-    return true;
+    std::ofstream file;
+
+    // To delete the file previous content
+    file.open(fileName, std::ofstream::out | std::ofstream::trunc);
+
+    if (file.is_open()) {
+        const auto &json = outputTopolgoy.toJson();
+        file << json.dump(2);
+        file.close();
+    }
+    else {
+        std::ios_base::failure("Can't open file");
+    }
 }

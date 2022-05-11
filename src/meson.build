@@ -5,3 +5,4 @@ topologylib = library('topologylib',
                      sources,
                      include_directories: inc,
                      dependencies: json)
+

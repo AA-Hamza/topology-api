@@ -13,46 +13,47 @@ TopologyList::TopologyList(const std::vector<Topology> &m_topologiesSrc) {
 }
 
 
-Topology TopologyList::operator[](std::string topologyID) {
+const Topology &TopologyList::operator[](const std::string topologyID) const {
   if (m_topologies.find(topologyID) != m_topologies.end()) {
-    return m_topologies[topologyID];
+    return m_topologies.at(topologyID);
   }
   else {
-    throw std::invalid_argument("topologyID not found");
+    std::string err("topologyID: "+topologyID+" not found");
+    throw std::invalid_argument(err);
   }
 }
 
-bool TopologyList::add(const Topology &topology) {
+void TopologyList::add(const Topology &topology) {
   if (m_topologies.find(topology.m_topologyID) == m_topologies.end()) {
     m_topologies[topology.m_topologyID] = topology;
-    return true;
   }
   else {
-    throw std::invalid_argument("Topology already exists");
+    std::string err("topologyID: "+topology.m_topologyID+" already exists");
+    throw std::invalid_argument(err);
   }
-  return false;
 }
 
-bool TopologyList::erase(const std::string topologyID) {
+void TopologyList::erase(const std::string topologyID) {
   auto it = m_topologies.find(topologyID);
   if (it != m_topologies.end()) {
     m_topologies.erase(it);
-    return true;
   }
   else {
-    throw std::invalid_argument("topologyID not found");
+    std::string err("topologyID: "+topologyID+" not found");
+    throw std::invalid_argument(err);
   }
-  return false;
 }
 
 size_t TopologyList::size() const {
   return m_topologies.size();
 }
 
-std::map<std::string, Topology>::const_iterator TopologyList::cbegin() const {
-  return m_topologies.cbegin();
-}
-
-std::map<std::string, Topology>::const_iterator TopologyList::cend() const {
-  return m_topologies.cend();
+std::vector<std::string> TopologyList::getIDs() const {
+  // reserve m_topologies size of string objects
+  std::vector<std::string> topologyIDsVector(m_topologies.size());
+  size_t index = 0;
+  for (const auto &it : m_topologies) {
+    topologyIDsVector[index++] = (it.first);
+  }
+  return topologyIDsVector;
 }

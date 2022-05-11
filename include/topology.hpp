@@ -4,7 +4,8 @@
 #include <string>
 #include <vector>
 #include <nlohmann/json.hpp>
-#include "device.hpp"
+#include <memory>
+#include <device.hpp>
 
 using json = nlohmann::json;
 
@@ -29,17 +30,18 @@ namespace topology {
     /**
     * @return Topology ID
     */
-    const std::string getID() const;
+    std::string getID() const;
 
     /**
-    * @return A vector to topology devices
+    * @return A vector of std::unique_ptrs to topology devices
     */
-    const std::vector<Device> getDevices() const;
+    const std::vector<std::shared_ptr<const Device>> &getDevices() const;
+    //const std::vector<const Device *> &getDevices() ;
 
     /**
     * @return Devices connected to a m_netList node
     */
-    std::vector<Device> getDevicesConnectedTo(std::string netListNode) const;
+    std::vector<std::shared_ptr<const Device>> getDevicesConnectedTo(const std::string netListNode) const;
 
     /**
     * @return json representation of topology
@@ -50,7 +52,8 @@ namespace topology {
 
   private:
     std::string m_topologyID;
-    std::vector<Device> m_devices;
+    std::vector<std::shared_ptr<const Device>> m_devices;
+    //std::vector<const Device *> m_devices;
 
     /**
     * TopologyList is a friend as it needs access to m_topologyID and m_devices

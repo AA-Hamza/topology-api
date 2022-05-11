@@ -18,7 +18,7 @@ namespace topology {
       * @param deviceJson A json object representing the nmos
       */
       Nmos(const json &deviceJson);
-      virtual json toJson() const override;
+      json toJson() const;// override;
   };
 }
 #endif

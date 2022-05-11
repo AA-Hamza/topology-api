@@ -16,7 +16,12 @@ namespace topology {
       /**
       * @brief Compiler default constructor, used for initializing differnt data types
       */ 
-      Device() {}
+      Device() {};
+
+      /**
+      * @return returns the ID of the Device
+      */
+      std::string getID() const;
 
       /**
       * @return returns the type of the Device
@@ -33,7 +38,7 @@ namespace topology {
       * Make a copy of Device m_netList and return it
       * @return the net list of the Device
       */
-      std::vector<std::pair<std::string, std::string>> getNetList() const;
+      std::map<std::string, std::string> getNetList() const;
 
 
       /**
@@ -41,9 +46,7 @@ namespace topology {
       * Will get overridden by derived devices
       * @return the json object of Device
       */
-      virtual json toJson() const {
-        return json();  // returns empty object, here for compiler errors
-      };
+      virtual json toJson() const = 0;
 
       /**
       * Virtual destructor needed as this is the base class
@@ -54,7 +57,7 @@ namespace topology {
       std::string m_deviceID;
       std::string m_deviceType;
       std::map<std::string, double> m_deviceProperties;
-      std::vector<std::pair<std::string, std::string>> m_netList;
+      std::map<std::string, std::string> m_netList;
   };
 }
 #endif

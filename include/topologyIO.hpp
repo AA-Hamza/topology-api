@@ -24,6 +24,6 @@ namespace topology {
   * @throw json::exception
   * @return true on success, false otherwise
   */
-  bool writeJSON(const topology::TopologyList &topologyList, const std::string topolgoyID, const std::string fileName = "");
+  void writeJSON(const Topology &outputTopolgoy, const std::string fileName = "");
 }
 #endif

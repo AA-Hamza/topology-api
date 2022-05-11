@@ -15,7 +15,7 @@ Resistor::Resistor(const json &deviceJson) {
     json netList = deviceJson.at("netlist");
     for (const auto &node : netList.items()) {
       // Changing from json key value pair to ordinary cpp pair
-      m_netList.push_back(std::make_pair(node.key(), node.value()));
+      m_netList[node.key()] = node.value();
     }
   }
   catch (const json::exception &e){
