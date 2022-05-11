@@ -1,29 +1,34 @@
+#include "test.h"
 #include <exception>
+#include <iostream>
 #include <sstream>
 #include <topologyIO.hpp>
 #include <topologyList.hpp>
-#include <iostream>
 #include <vector>
-#include "test.h"
 
-void testTopologyListAdd(const std::vector<std::string> &fileNamesVector) {
+void testTopologyListAdd(const std::vector<std::string> &fileNamesVector)
+{
     topology::TopologyList exTopolgoyList;
-    for (const auto &fileName : fileNamesVector) {
+    for (const auto &fileName : fileNamesVector)
+    {
         topology::Topology exTopology = topology::readJSON(fileName);
         exTopolgoyList.add(exTopology);
     }
 
     // Asserting topologyListTest added all topologies correctly
     assert(exTopolgoyList.size() == fileNamesVector.size());
-    
+
     // adding an already existing topology
-    for (const auto &exFileName : fileNamesVector) {
+    for (const auto &exFileName : fileNamesVector)
+    {
         topology::Topology exTopology = topology::readJSON(exFileName);
-        try {
+        try
+        {
             exTopolgoyList.add(exTopology);
         }
-        catch (std::exception &e) {
-            assert(e.what() == "topologyID: "+exTopology.getID()+" already exists");
+        catch (std::exception &e)
+        {
+            assert(e.what() == "topologyID: " + exTopology.getID() + " already exists");
         }
     }
 
@@ -31,9 +36,11 @@ void testTopologyListAdd(const std::vector<std::string> &fileNamesVector) {
     assert(exTopolgoyList.size() == fileNamesVector.size());
 }
 
-void testTopologyListErase(const std::vector<std::string> &fileNamesVector) {
+void testTopologyListErase(const std::vector<std::string> &fileNamesVector)
+{
     topology::TopologyList exTopolgoyList;
-    for (const auto &fileName : fileNamesVector) {
+    for (const auto &fileName : fileNamesVector)
+    {
         topology::Topology exTopology = topology::readJSON(fileName);
         exTopolgoyList.add(exTopology);
     }
@@ -51,24 +58,27 @@ void testTopologyListErase(const std::vector<std::string> &fileNamesVector) {
     exTopolgoyList.erase(eraseThisTopology.getID());
 
     // Asserting that the size of topologyListTest went down by 1
-    assert(exTopolgoyList.size() == fileNamesVector.size()-1);
+    assert(exTopolgoyList.size() == fileNamesVector.size() - 1);
 
     // Try acessing the deleted topology ID
-    try {
+    try
+    {
         exTopolgoyList[eraseThisTopology.getID()];
-    } catch (std::exception &e) {
-        std::cerr << e.what() << std::endl;
-        assert(e.what() == "topologyID: "+eraseThisTopology.getID()+" not found"); 
     }
-    
+    catch (std::exception &e)
+    {
+        std::cerr << e.what() << std::endl;
+        assert(e.what() == "topologyID: " + eraseThisTopology.getID() + " not found");
+    }
+
     // Asserting topologyListTest didn't add an existing topology
-    assert(exTopolgoyList.size() == fileNamesVector.size()-1);
+    assert(exTopolgoyList.size() == fileNamesVector.size() - 1);
 }
 
 int main()
 {
     std::vector<std::string> fileNamesVector(fileNamesArray, std::end(fileNamesArray));
-    
+
     /****************************
      * Testing the add function *
      ****************************
