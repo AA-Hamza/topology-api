@@ -85,16 +85,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5f2fc53f08303a556769d778c9ef3c65"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtopology_1_1Topology.html#a5f2fc53f08303a556769d778c9ef3c65">Topology</a> ()=default</td></tr>
 <tr class="memdesc:a5f2fc53f08303a556769d778c9ef3c65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Using compiler default constructor.  <a href="classtopology_1_1Topology.html#a5f2fc53f08303a556769d778c9ef3c65">More...</a><br /></td></tr>
 <tr class="separator:a5f2fc53f08303a556769d778c9ef3c65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aace7811a2d5874cef8b569b90684d0c9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtopology_1_1Topology.html#aace7811a2d5874cef8b569b90684d0c9">Topology</a> (const json &amp;topologyJson)</td></tr>
-<tr class="memdesc:aace7811a2d5874cef8b569b90684d0c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct <a class="el" href="classtopology_1_1Topology.html" title="Topology class to represent the topology and parse the json object.">Topology</a> from the Json object.  <a href="classtopology_1_1Topology.html#aace7811a2d5874cef8b569b90684d0c9">More...</a><br /></td></tr>
-<tr class="separator:aace7811a2d5874cef8b569b90684d0c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab38788b0e09d92c077b3aeeb85741946"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtopology_1_1Topology.html#ab38788b0e09d92c077b3aeeb85741946">getID</a> () const</td></tr>
-<tr class="separator:ab38788b0e09d92c077b3aeeb85741946"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac269edde6fd57ebf5658f6a526e5b129"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classtopology_1_1Device.html">Device</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtopology_1_1Topology.html#ac269edde6fd57ebf5658f6a526e5b129">getDevices</a> () const</td></tr>
-<tr class="separator:ac269edde6fd57ebf5658f6a526e5b129"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71dfe59f6f5023bd1eed4257a6b2e199"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classtopology_1_1Device.html">Device</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtopology_1_1Topology.html#a71dfe59f6f5023bd1eed4257a6b2e199">getDevicesConnectedTo</a> (std::string netListNode) const</td></tr>
-<tr class="separator:a71dfe59f6f5023bd1eed4257a6b2e199"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeca7a520a34914251fc4e3dcd5c27194"><td class="memItemLeft" align="right" valign="top">json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtopology_1_1Topology.html#aeca7a520a34914251fc4e3dcd5c27194">toJson</a> () const</td></tr>
+<tr class="memitem:a9cac59182b1a314f711c36d396d4efb0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtopology_1_1Topology.html#a9cac59182b1a314f711c36d396d4efb0">Topology</a> (const nlohmann::json &amp;topologyJson)</td></tr>
+<tr class="memdesc:a9cac59182b1a314f711c36d396d4efb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct <a class="el" href="classtopology_1_1Topology.html" title="Topology class to represent the topology and parse the json object.">Topology</a> from the Json object, throws an error if toplogyJson can't be parsed.  <a href="classtopology_1_1Topology.html#a9cac59182b1a314f711c36d396d4efb0">More...</a><br /></td></tr>
+<tr class="separator:a9cac59182b1a314f711c36d396d4efb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9299e113f9e6cc2cd8841dec117b53a9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtopology_1_1Topology.html#a9299e113f9e6cc2cd8841dec117b53a9">getID</a> () const</td></tr>
+<tr class="separator:a9299e113f9e6cc2cd8841dec117b53a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04fe82fdb445bf5218c676d3e9a69de2"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::shared_ptr&lt; const <a class="el" href="classtopology_1_1Device.html">Device</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtopology_1_1Topology.html#a04fe82fdb445bf5218c676d3e9a69de2">getDevices</a> () const</td></tr>
+<tr class="memdesc:a04fe82fdb445bf5218c676d3e9a69de2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get <a class="el" href="classtopology_1_1Topology.html" title="Topology class to represent the topology and parse the json object.">Topology</a> Devices.  <a href="classtopology_1_1Topology.html#a04fe82fdb445bf5218c676d3e9a69de2">More...</a><br /></td></tr>
+<tr class="separator:a04fe82fdb445bf5218c676d3e9a69de2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a839ed9b45171820509acbf74afdff1fb"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; const <a class="el" href="classtopology_1_1Device.html">Device</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtopology_1_1Topology.html#a839ed9b45171820509acbf74afdff1fb">getDevicesConnectedTo</a> (const std::string netListNode) const</td></tr>
+<tr class="memdesc:a839ed9b45171820509acbf74afdff1fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all Devices connected to a net list node.  <a href="classtopology_1_1Topology.html#a839ed9b45171820509acbf74afdff1fb">More...</a><br /></td></tr>
+<tr class="separator:a839ed9b45171820509acbf74afdff1fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeca7a520a34914251fc4e3dcd5c27194"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtopology_1_1Topology.html#aeca7a520a34914251fc4e3dcd5c27194">toJson</a> () const</td></tr>
 <tr class="separator:aeca7a520a34914251fc4e3dcd5c27194"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
@@ -133,8 +135,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="aace7811a2d5874cef8b569b90684d0c9" name="aace7811a2d5874cef8b569b90684d0c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aace7811a2d5874cef8b569b90684d0c9">&#9670;&nbsp;</a></span>Topology() <span class="overload">[2/2]</span></h2>
+<a id="a9cac59182b1a314f711c36d396d4efb0" name="a9cac59182b1a314f711c36d396d4efb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cac59182b1a314f711c36d396d4efb0">&#9670;&nbsp;</a></span>Topology() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -142,14 +144,20 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">Topology::Topology </td>
           <td>(</td>
-          <td class="paramtype">const json &amp;&#160;</td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
           <td class="paramname"><em>topologyJson</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Construct <a class="el" href="classtopology_1_1Topology.html" title="Topology class to represent the topology and parse the json object.">Topology</a> from the Json object. </p>
+<p>Construct <a class="el" href="classtopology_1_1Topology.html" title="Topology class to represent the topology and parse the json object.">Topology</a> from the Json object, throws an error if toplogyJson can't be parsed. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">json::exception</td><td>when topologyJson parsing fails </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">topologyJson</td><td>the topology json object </td></tr>
@@ -160,51 +168,55 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ac269edde6fd57ebf5658f6a526e5b129" name="ac269edde6fd57ebf5658f6a526e5b129"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac269edde6fd57ebf5658f6a526e5b129">&#9670;&nbsp;</a></span>getDevices()</h2>
+<a id="a04fe82fdb445bf5218c676d3e9a69de2" name="a04fe82fdb445bf5218c676d3e9a69de2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04fe82fdb445bf5218c676d3e9a69de2">&#9670;&nbsp;</a></span>getDevices()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt; <a class="el" href="classtopology_1_1Device.html">Device</a> &gt; Topology::getDevices </td>
+          <td class="memname">const std::vector&lt; std::shared_ptr&lt; const <a class="el" href="classtopology_1_1Device.html">Device</a> &gt; &gt; &amp; Topology::getDevices </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>A vector to topology devices </dd></dl>
+
+<p>Get <a class="el" href="classtopology_1_1Topology.html" title="Topology class to represent the topology and parse the json object.">Topology</a> Devices. </p>
+<dl class="section return"><dt>Returns</dt><dd>A const refernce to a vector of pointers to const topology devices </dd></dl>
 
 </div>
 </div>
-<a id="a71dfe59f6f5023bd1eed4257a6b2e199" name="a71dfe59f6f5023bd1eed4257a6b2e199"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71dfe59f6f5023bd1eed4257a6b2e199">&#9670;&nbsp;</a></span>getDevicesConnectedTo()</h2>
+<a id="a839ed9b45171820509acbf74afdff1fb" name="a839ed9b45171820509acbf74afdff1fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a839ed9b45171820509acbf74afdff1fb">&#9670;&nbsp;</a></span>getDevicesConnectedTo()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; <a class="el" href="classtopology_1_1Device.html">Device</a> &gt; topology::Topology::getDevicesConnectedTo </td>
+          <td class="memname">std::vector&lt; std::shared_ptr&lt; const <a class="el" href="classtopology_1_1Device.html">Device</a> &gt; &gt; Topology::getDevicesConnectedTo </td>
           <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
+          <td class="paramtype">const std::string&#160;</td>
           <td class="paramname"><em>netListNode</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>Devices connected to a m_netList node </dd></dl>
+
+<p>Get all Devices connected to a net list node. </p>
+<dl class="section return"><dt>Returns</dt><dd>a vector of pointers to Devices connected to a m_netList node </dd></dl>
 
 </div>
 </div>
-<a id="ab38788b0e09d92c077b3aeeb85741946" name="ab38788b0e09d92c077b3aeeb85741946"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab38788b0e09d92c077b3aeeb85741946">&#9670;&nbsp;</a></span>getID()</h2>
+<a id="a9299e113f9e6cc2cd8841dec117b53a9" name="a9299e113f9e6cc2cd8841dec117b53a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9299e113f9e6cc2cd8841dec117b53a9">&#9670;&nbsp;</a></span>getID()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::string Topology::getID </td>
+          <td class="memname">std::string Topology::getID </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>

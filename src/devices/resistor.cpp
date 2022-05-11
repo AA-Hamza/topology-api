@@ -1,7 +1,11 @@
-#include <devices/resistor.hpp>
+#include <exception>
 #include <iostream>
+#include <nlohmann/json.hpp>
+#include "devices/resistor.hpp"
+#include "device.hpp"
 
 using namespace topology;
+using json = nlohmann::json;
 
 // Constructor
 Resistor::Resistor(const json &deviceJson) {

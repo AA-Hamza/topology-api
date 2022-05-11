@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['device_0',['Device',['../classtopology_1_1Device.html#a9965118047a56118370c302fd5878f32',1,'topology::Device']]]
+  ['erase_0',['erase',['../classtopology_1_1TopologyList.html#aec30a26a3016f2ce70a31187545d7b8e',1,'topology::TopologyList']]]
 ];

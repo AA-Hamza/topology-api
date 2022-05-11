@@ -3,9 +3,7 @@
 
 #include <nlohmann/json.hpp>
 #include <string>
-#include <device.hpp>
-
-using json = nlohmann::json;
+#include "device.hpp"
 
 namespace topology {
   /**
@@ -17,8 +15,10 @@ namespace topology {
       * @brief Construct a N-type metal-oxide-semiconductor from the json representation
       * @param deviceJson A json object representing the nmos
       */
-      Nmos(const json &deviceJson);
-      json toJson() const;// override;
+      Nmos(const nlohmann::json &deviceJson);
+
+      // Override Device toJson
+      nlohmann::json toJson() const override;
   };
 }
 #endif

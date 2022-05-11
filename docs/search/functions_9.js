@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['tojson_0',['toJson',['../classtopology_1_1Device.html#a249b3bcaae2b941f8b96e050d6bd56f4',1,'topology::Device::toJson()'],['../classtopology_1_1Topology.html#aeca7a520a34914251fc4e3dcd5c27194',1,'topology::Topology::toJson()'],['../classtopology_1_1Nmos.html#a5c69a487f8960d6702d6c3eeb5853834',1,'topology::Nmos::toJson()'],['../classtopology_1_1Resistor.html#a880bb04ebf1bbc3d2eeedfa61757fe4f',1,'topology::Resistor::toJson()']]],
-  ['topology_1',['Topology',['../classtopology_1_1Topology.html#a5f2fc53f08303a556769d778c9ef3c65',1,'topology::Topology::Topology()=default'],['../classtopology_1_1Topology.html#aace7811a2d5874cef8b569b90684d0c9',1,'topology::Topology::Topology(const json &amp;topologyJson)']]],
-  ['topologylist_2',['TopologyList',['../classtopology_1_1TopologyList.html#a064bd53df61aed3f0d37695803241ad7',1,'topology::TopologyList']]]
+  ['_7edevice_0',['~Device',['../classtopology_1_1Device.html#aaf5d373860e6d8fb556ff8f2bb800b4c',1,'topology::Device']]]
 ];

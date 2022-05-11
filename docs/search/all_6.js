@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['operator_5b_5d_0',['operator[]',['../classtopology_1_1TopologyList.html#a935fbfdf3f3c0ed18ba9a043a9d27ea4',1,'topology::TopologyList']]]
+  ['resistor_0',['Resistor',['../classtopology_1_1Resistor.html#a66ddf7bb74148094d3d6034e6c253921',1,'topology::Resistor::Resistor()'],['../classtopology_1_1Resistor.html',1,'topology::Resistor']]]
 ];

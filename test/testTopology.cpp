@@ -1,16 +1,15 @@
-#include "devices/resistor.hpp"
 #include <exception>
 #include <fstream>
 #include <memory>
 #include <sstream>
 #include <string>
-#include <topologyIO.hpp>
-#include <topology.hpp>
-#include <device.hpp>
 #include <iostream>
 #include <vector>
 #include <nlohmann/json.hpp>
 #include "test.h"
+#include "device.hpp"
+#include "topologyIO.hpp"
+#include "topology.hpp"
 
 
 void testTopologyGetID(const std::string fileName) {
@@ -68,8 +67,8 @@ void testTopologyGetDevicesConnectedTo(const std::string fileName, const std::st
 
 int main()
 {
-
   std::vector<std::string> fileNamesVector(fileNamesArray, std::end(fileNamesArray));
+
   /******************
     * Testing getID *
     *****************
@@ -79,7 +78,7 @@ int main()
   }
 
 
-  /****************************
+  /*****************************
     * Testing getDevices       *
     ****************************
     */
@@ -87,7 +86,7 @@ int main()
     testTopologyGetDevices(fileName);
   }
 
-  /****************************
+  /*****************************
     * Testing toJson           *
     ****************************
     */
@@ -95,7 +94,7 @@ int main()
     testTopologyToJson(fileName);
   }
 
-  /*********************************
+  /**********************************
     * Testing getDevicesConnectedTo *
     *********************************
     */

@@ -4,10 +4,7 @@
 #include <string>
 #include <map>
 #include <vector>
-#include <nlohmann/json.hpp>
-#include <topology.hpp>
-
-using json = nlohmann::json;
+#include "topology.hpp"
 
 
 namespace topology {
@@ -16,33 +13,33 @@ namespace topology {
   */
   class TopologyList {
     public:
-      // Empty constructor, makes the compiler happy
+      // Empty constructor, for basic construction.
       TopologyList() {};
 
       /**
-      * TopologyList constructor from a vector of Topology
+      * @brief TopologyList constructor from a vector of Topology
       * @param topologiesSrc a vector of Topology objects
       */
       TopologyList(const std::vector<Topology> &topologiesSrc);
 
       /**
       * @brief get the topolgoy holding topologyID
-      * @throw std::invalid_argument("Topology ID was not found")
+      * @throw std::invalid_argument if topologyID doesn't exist
       * @param topologyID a topology object ID
-      * @return returns a copy to the topology with topologyID
+      * @return returns a const reference to the topology with topologyID
       */
       const Topology &operator[](const std::string topologyID) const;
 
       /**
-      * @brief Add a new Topology to the TopologyList, throws an exception if topology already exists
-      * @throw std::invalid_argument("Topology already exists")
+      * @brief Add a new Topology to the TopologyList
+      * @throw std::invalid_argument if topology already exists
       * @param topology a topology Object
       */
       void add(const Topology &topology);
 
       /**
-      * @brief remove a Topology from the TopologyList, throws an exception if topologyID wasn't found
-      * @throw std::invalid_argument("topologyID not found")
+      * @brief remove a Topology from the TopologyList
+      * @throw std::invalid_argument if topologyID wasn't found
       * @param topologyID a topology Object ID
       */
       void erase(const std::string topologyID);

@@ -1,8 +1,11 @@
-#include "device.hpp"
-#include <devices/nmos.hpp>
+#include <exception>
+#include <nlohmann/json.hpp>
 #include <iostream>
+#include "devices/nmos.hpp"
+#include "device.hpp"
 
 using namespace topology;
+using json = nlohmann::json;
 
 // Constructor
 Nmos::Nmos(const json &deviceJson) {

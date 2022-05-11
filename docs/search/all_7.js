@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['resistor_0',['Resistor',['../classtopology_1_1Resistor.html#a6d66101d6f0159c65a99327d3b460ad8',1,'topology::Resistor::Resistor()'],['../classtopology_1_1Resistor.html',1,'topology::Resistor']]]
+  ['size_0',['size',['../classtopology_1_1TopologyList.html#a42186779a08e55271536045ad77de85d',1,'topology::TopologyList']]]
 ];

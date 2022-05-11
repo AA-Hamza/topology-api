@@ -3,9 +3,7 @@
 
 #include <nlohmann/json.hpp>
 #include <string>
-#include <device.hpp>
-
-using json = nlohmann::json;
+#include "device.hpp"
 
 namespace topology {
   /**
@@ -17,8 +15,10 @@ namespace topology {
       * Construct a Resistor from the json representation
       * @param deviceJson A json object representing the resistor
       */
-      Resistor(const json &deviceJson);
-      json toJson() const;// override;
+      Resistor(const nlohmann::json &deviceJson);
+
+      // Override Device toJson
+      nlohmann::json toJson() const override;
   };
 }
 #endif

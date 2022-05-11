@@ -1,16 +1,13 @@
-#include "devices/resistor.hpp"
 #include <exception>
-#include <fstream>
-#include <memory>
-#include <sstream>
 #include <string>
-#include <topologyIO.hpp>
-#include <topology.hpp>
-#include <device.hpp>
 #include <iostream>
+#include <fstream>
 #include <vector>
 #include <nlohmann/json.hpp>
 #include "test.h"
+#include "topologyIO.hpp"
+#include "topology.hpp"
+#include "device.hpp"
 
 inline void testDeviceGetID(const topology::Device &device, const nlohmann::json &deviceJson) {
   assert(device.getID() == deviceJson.at("id"));

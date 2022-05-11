@@ -3,9 +3,6 @@
 
 #include <nlohmann/json.hpp>
 #include <string>
-#include <iostream>
-
-using json = nlohmann::json;
 
 namespace topology {
   /**
@@ -29,24 +26,23 @@ namespace topology {
       std::string getType() const;
 
       /**
-      * Make a copy of m_deviceProperties and return it
-      * @return returns a map<string, double> representing a copy of device properites
+      * @brief Gets Device properties
+      * @return returns a const reference to Device properties
       */
-      std::map<std::string, double> getProperties() const;
+      const std::map<std::string, double> &getProperties() const;
 
       /**
-      * Make a copy of Device m_netList and return it
-      * @return the net list of the Device
+      * @brief Gets Device net list
+      * @return returns a const reference to Device netList
       */
-      std::map<std::string, std::string> getNetList() const;
-
+      const std::map<std::string, std::string> &getNetList() const;
 
       /**
       * Make a json representation of Device
       * Will get overridden by derived devices
       * @return the json object of Device
       */
-      virtual json toJson() const = 0;
+      virtual nlohmann::json toJson() const = 0;
 
       /**
       * Virtual destructor needed as this is the base class

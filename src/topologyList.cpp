@@ -1,7 +1,6 @@
 #include <exception>
-#include <stdexcept>
-#include <topologyList.hpp>
-#include <topology.hpp>
+#include "topologyList.hpp"
+#include "topology.hpp"
 
 using namespace topology;
 
@@ -55,5 +54,6 @@ std::vector<std::string> TopologyList::getIDs() const {
   for (const auto &it : m_topologies) {
     topologyIDsVector[index++] = (it.first);
   }
+  // return value optimization should work here, so no need for references or pointers.
   return topologyIDsVector;
 }
