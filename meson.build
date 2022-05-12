@@ -7,3 +7,9 @@ inc = include_directories('include')
 subdir('include')
 subdir('src')
 subdir('test')
+
+example = executable('example',
+                     'example.cpp',
+                     dependencies: json,
+                     include_directories: inc,
+                     link_with: topologylib)

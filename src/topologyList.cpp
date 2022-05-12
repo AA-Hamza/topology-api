@@ -26,7 +26,7 @@ const Topology &TopologyList::operator[](const std::string topologyID) const
     }
 }
 
-void TopologyList::add(const Topology &topology)
+void TopologyList::add(const Topology topology)
 {
     if (m_topologies.find(topology.m_topologyID) == m_topologies.end())
     {

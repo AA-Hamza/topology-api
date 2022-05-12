@@ -1,0 +1,5 @@
+<map id="topology::Device" name="topology::Device">
+<area shape="rect" id="node1" title="base class containing basic functionality of every device" alt="" coords="61,5,209,215"/>
+<area shape="rect" id="node2" href="$classtopology_1_1Nmos.html" title="Nmos (N&#45;type metal&#45;oxide&#45;semiconductor) device." alt="" coords="5,263,120,355"/>
+<area shape="rect" id="node3" href="$classtopology_1_1Resistor.html" title="Resistor device." alt="" coords="144,263,272,355"/>
+</map>

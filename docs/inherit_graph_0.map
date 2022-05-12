@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classtopology_1_1Device.html" title="base class containing basic functionality of every device" alt="" coords="5,31,125,57"/>
+<area shape="rect" id="node2" href="$classtopology_1_1Nmos.html" title="Nmos (N&#45;type metal&#45;oxide&#45;semiconductor) device." alt="" coords="180,5,295,32"/>
+<area shape="rect" id="node3" href="$classtopology_1_1Resistor.html" title="Resistor device." alt="" coords="173,56,301,83"/>
+</map>

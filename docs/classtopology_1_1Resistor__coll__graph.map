@@ -1,0 +1,4 @@
+<map id="topology::Resistor" name="topology::Resistor">
+<area shape="rect" id="node1" title="Resistor device." alt="" coords="15,263,143,355"/>
+<area shape="rect" id="node2" href="$classtopology_1_1Device.html" title="base class containing basic functionality of every device" alt="" coords="5,5,153,215"/>
+</map>

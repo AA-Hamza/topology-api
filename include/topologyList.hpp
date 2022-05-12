@@ -36,7 +36,7 @@ class TopologyList
      * @throw std::invalid_argument if topology already exists
      * @param topology a topology Object
      */
-    void add(const Topology &topology);
+    void add(const Topology topology);
 
     /**
      * @brief remove a Topology from the TopologyList

@@ -70,19 +70,25 @@ $(function() {
   <div class="headertitle"><div class="title">topologyIO.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef topologyAPI_H</span></div>
+<a href="topologyIO_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef topologyAPI_H</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define topologyAPI_H</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;topology.hpp&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;device.hpp&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="device_8hpp.html">device.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="topology_8hpp.html">topology.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>topology {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  Topology readJSON(<span class="keyword">const</span> std::string fileName = <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <span class="keywordtype">void</span> writeJSON(<span class="keyword">const</span> Topology &amp;outputTopolgoy, <span class="keyword">const</span> std::string fileName = <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>}</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacetopology.html">topology</a></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>Topology <a class="code hl_function" href="namespacetopology.html#a5eae36f13f31ddac9daee58141073961">readJSON</a>(<span class="keyword">const</span> std::string fileName = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacetopology.html#a9e45204a3e217db966937c4fa42dfc5d">writeJSON</a>(<span class="keyword">const</span> Topology &amp;outputTopolgoy, <span class="keyword">const</span> std::string fileName = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>} <span class="comment">// namespace topology</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="adevice_8hpp_html"><div class="ttname"><a href="device_8hpp.html">device.hpp</a></div></div>
+<div class="ttc" id="anamespacetopology_html"><div class="ttname"><a href="namespacetopology.html">topology</a></div><div class="ttdef"><b>Definition:</b> device.hpp:8</div></div>
+<div class="ttc" id="anamespacetopology_html_a5eae36f13f31ddac9daee58141073961"><div class="ttname"><a href="namespacetopology.html#a5eae36f13f31ddac9daee58141073961">topology::readJSON</a></div><div class="ttdeci">Topology readJSON(const std::string fileName=&quot;&quot;)</div><div class="ttdoc">Read a topology Json file (if fileName is not provided, it reads from stdin) and store it in a Topolo...</div><div class="ttdef"><b>Definition:</b> topologyIO.cpp:11</div></div>
+<div class="ttc" id="anamespacetopology_html_a9e45204a3e217db966937c4fa42dfc5d"><div class="ttname"><a href="namespacetopology.html#a9e45204a3e217db966937c4fa42dfc5d">topology::writeJSON</a></div><div class="ttdeci">void writeJSON(const Topology &amp;outputTopolgoy, const std::string fileName=&quot;&quot;)</div><div class="ttdoc">Writes a Topology from a TopologyList object to the hard disk.</div><div class="ttdef"><b>Definition:</b> topologyIO.cpp:43</div></div>
+<div class="ttc" id="atopology_8hpp_html"><div class="ttname"><a href="topology_8hpp.html">topology.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
