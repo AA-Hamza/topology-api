@@ -29,6 +29,7 @@ I considered something with buit-in support for JSON like Node.js but I wanted t
 * Meson build system
 * Doxygen for the documentation
 * clang-format for formatting the code
+* cppcheck for static analysis
 
 ## Tested Platforms
 * Runs on linux, see [github actions](https://github.com/AA-Hamza/topology-api/actions)
